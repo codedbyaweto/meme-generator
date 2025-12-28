@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+main {
+    margin-inline: auto;
+    padding: 36px;
+    max-width: 600px;
+    
+    transition: background-color 0.3s ease, color 0.3s ease
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+    padding: 20px;
+}
+
+.header > img {
+    height: 100%;
+    margin-right: 6px;
+}
+
+.header > h1 {
+    font-size: 1.25rem;
+    margin-right: auto;
+}
+
+.form {
+    display: grid;
+    grid-template: auto auto / 1fr 1fr;
+    gap: 17px;
+    margin-bottom: 17px;
+}
+
+.form input {
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+
+.form button {
+    grid-column: 1 / -1;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form input, .form button {
+    min-height: 40px;
+    font-family: "Karla", sans-serif;
+}
+
+.meme {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meme > img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.meme span {
+    position: absolute;
+    text-align: center;
+    margin-block: 15px;
+    padding-inline: 5px;
+    font-family: impact, sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.top {
+    top: 0;
+}
+
+
+/* DARK MODE: MAIN CONTENT ONLY */
+.main.dark {
+    background-color: #121212 !important;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 36px;
+}
+
+.main.dark .form input {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+.main.dark .form button {
+    background: linear-gradient(90deg, #4a1360 1%, #7b1fa2 100%);
+}
+
+.main.dark .meme {
+    background-color: #121212;
+}
+
+.main.dark .meme span {
+    color: white; /* text stays visible */
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+body.dark-mode {
+  background-color: #121212; /* dark background */
+  color: white; /* optional: change text color globally */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header button */
+header .toggle-btn {
+    margin-left: auto;         /* pushes button to the right */
+    padding: 8px 16px;
+    font-family: "Karla", sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, #711F8D 1%, #A818DA 100%);
+    color: white;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+header .toggle-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #5a146e 1%, #8c13b5 100%);
+}
+
+/* Optional: Dark mode variant */
+header.dark .toggle-btn {
+    background: linear-gradient(90deg, #4a1360 1%, #7b1fa2 100%);
+    color: #fff;
+}
+
+header.dark .toggle-btn:hover {
+    background: linear-gradient(90deg, #3b0f4a 1%, #641b80 100%);
+}
